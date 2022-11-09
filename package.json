@@ -52,5 +52,9 @@
     "prettier": "2.7.1",
     "prisma": "^3.6.0",
     "ts-node": "^10.4.0"
+  },
+
+  "prisma": {
+    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
   }
 }
