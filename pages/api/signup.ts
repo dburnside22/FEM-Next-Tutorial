@@ -6,7 +6,7 @@ import prisma from "../../lib/prisma";
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   const salt = bcrypt.genSaltSync();
-  const { email, password } = rec.body;
+  const { email, password } = req.body;
 
   let user;
 
@@ -43,4 +43,6 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       secure: process.env.NODE_ENV === "production",
     })
   );
+
+  res.json(user);
 };
