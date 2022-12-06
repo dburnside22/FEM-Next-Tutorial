@@ -47,14 +47,14 @@ const Sidebar = () => {
         <Box marginBottom="20px">
           <List spacing={2}>
             {navMenu.map((menu) => (
-              <MenuItem menu={menu} />
+              <MenuItem menu={menu} key={String(Math.random() * 100)} />
             ))}
           </List>
         </Box>
         <Box marginTop="20px">
           <List spacing={2}>
             {musicMenu.map((menu) => (
-              <MenuItem menu={menu} />
+              <MenuItem menu={menu} key={String(Math.random() * 100)} />
             ))}
           </List>
         </Box>
